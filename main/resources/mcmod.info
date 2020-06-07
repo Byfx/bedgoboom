@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bm",
+  "name": "Bed Go Boom",
+  "description": "Bed will go boom if you try to sleep somewhere that isn't the surface. Made to function with Forge Essentials' multiworlds.",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Byfx, Pangamma"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
