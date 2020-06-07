@@ -8,6 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.util.EnumFacing;
@@ -36,16 +37,16 @@ public class PlayerSleepInBedEvent {
         }
     }
 
-//    @SubscribeEvent(priority = EventPriority.HIGHEST)
-//    public void onSetSpawn(net.minecraftforge.event.entity.player.PlayerSetSpawnEvent e) {
-//        if (e.getEntityPlayer() != null){
-//            if (e.getEntityPlayer().dimension != 0){
-//            	e.setCanceled(true);
-//                e.getEntityPlayer().sendMessage(new TextComponentString("You are only allowed to set your spawn in dimension 0 (overworld)."));
-//                e.setResult(Event.Result.DENY);
-//            }
-//        }
-//    }
+   @SubscribeEvent(priority = EventPriority.HIGHEST)
+   public void onSetSpawn(net.minecraftforge.event.entity.player.PlayerSetSpawnEvent e) {
+       if (e.getEntityPlayer() != null){
+           if (e.getEntityPlayer().dimension != 0){
+           	e.setCanceled(true);
+               e.getEntityPlayer().sendMessage(new TextComponentString("You are only allowed to set your spawn in dimension 0 (overworld)."));
+               e.setResult(Event.Result.DENY);
+           }
+       }
+   }
 	
 }
 
